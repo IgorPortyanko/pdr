@@ -1,0 +1,271 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-body: 'Manrope', 'Segoe UI', sans-serif;
+    --font-heading: 'IBM Plex Serif', Georgia, serif;
+    --font-mono: 'JetBrains Mono', 'SFMono-Regular', monospace;
+
+    /* Backgrounds */
+    --c-bg:           #fbf8f2;
+    --c-surface:      #fffdf8;
+    --c-surface-2:    #f5f1e8;
+    --c-surface-3:    #f7f2ea;
+    --c-hover:        #f0e8e0;
+    --c-accent-soft:  #f5ede6;
+    --c-error-soft:   #fbebe8;
+    --c-success-soft: #ebf6ee;
+
+    /* Text */
+    --c-text:   #2a2520;
+    --c-text-2: #5a524a;
+    --c-text-3: #4c433c;
+    --c-text-4: #8a7b6e;
+    --c-text-5: #9a9188;
+    --c-text-6: #b0a89e;
+
+    /* Brand */
+    --c-accent:   #c1643c;
+    --c-accent-2: #8f573c;
+    --c-success:  #2d7a46;
+    --c-error:    #d63c3c;
+
+    /* Borders */
+    --c-border:        #2a2520;
+    --c-border-light:  #e8e0d6;
+    --c-border-accent: #e8d8cc;
+
+    /* Misc */
+    --c-overlay: rgba(42, 37, 32, 0.45);
+    --c-subtle:  rgba(42, 37, 32, 0.12);
+    --c-subtle-2: rgba(42, 37, 32, 0.14);
+    --c-success-border: rgba(45, 122, 70, 0.25);
+    --c-accent-border:  rgba(193, 100, 60, 0.25);
+  }
+
+  :root.dark {
+    /* Backgrounds */
+    --c-bg:           #1c1914;
+    --c-surface:      #252219;
+    --c-surface-2:    #2e2a20;
+    --c-surface-3:    #2a2620;
+    --c-hover:        #332e24;
+    --c-accent-soft:  #2d2015;
+    --c-error-soft:   #2a1714;
+    --c-success-soft: #142418;
+
+    /* Text */
+    --c-text:   #e8e2da;
+    --c-text-2: #a09890;
+    --c-text-3: #c0b8b0;
+    --c-text-4: #7a706a;
+    --c-text-5: #60585c;
+    --c-text-6: #504848;
+
+    /* Brand */
+    --c-accent:   #d4764e;
+    --c-accent-2: #c46840;
+    --c-success:  #3d9a5a;
+    --c-error:    #e55555;
+
+    /* Borders */
+    --c-border:        #504840;
+    --c-border-light:  #3a342c;
+    --c-border-accent: #3d3028;
+
+    /* Misc */
+    --c-overlay: rgba(0, 0, 0, 0.72);
+    --c-subtle:  rgba(255, 255, 255, 0.08);
+    --c-subtle-2: rgba(255, 255, 255, 0.10);
+    --c-success-border: rgba(61, 154, 90, 0.3);
+    --c-accent-border:  rgba(212, 118, 78, 0.3);
+  }
+
+  html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: var(--c-bg);
+    color: var(--c-text);
+    font-family: var(--font-body);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  input, textarea, select {
+    font-family: var(--font-body);
+    color: var(--c-text);
+  }
+
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: var(--c-surface-2); }
+  ::-webkit-scrollbar-thumb { background: var(--c-text-5); border-radius: 3px; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.6; }
+}
+
+@layer components {
+  .wk-box {
+    border: 1.5px solid var(--c-border);
+    border-radius: 3px;
+    background: var(--c-bg);
+  }
+
+  .wk-box-rough {
+    border-style: solid;
+    border-width: 1.5px 1.5px 2px 1.5px;
+    border-radius: 4px 3px 5px 3px;
+  }
+
+  .wk-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    border: 1.2px solid var(--c-border);
+    border-radius: 999px;
+    padding: 1px 9px;
+    font-family: var(--font-body);
+    font-size: 12px;
+    background: var(--c-bg);
+    white-space: nowrap;
+  }
+
+  .wk-chip-accent {
+    background: var(--c-accent-soft);
+    border-color: var(--c-accent);
+    color: var(--c-accent);
+  }
+
+  .wk-chip-mute {
+    border-color: var(--c-text-5);
+    color: var(--c-text-2);
+  }
+
+  .wk-chip-review {
+    background: #f6edd3;
+    border-color: #7a5a1e;
+    color: #7a5a1e;
+  }
+
+  .wk-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    border: 1.5px solid var(--c-border);
+    border-radius: 3px;
+    padding: 4px 10px;
+    background: var(--c-bg);
+    color: var(--c-text);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition:
+      background 0.12s ease,
+      border-color 0.12s ease,
+      box-shadow 0.12s ease,
+      transform 0.12s ease;
+    white-space: nowrap;
+  }
+
+  .wk-btn:hover:not(:disabled) {
+    background: var(--c-accent-soft);
+    border-color: var(--c-accent);
+    box-shadow: 0 2px 0 rgba(42, 37, 32, 0.16);
+    transform: translateY(-1px);
+  }
+
+  .wk-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  .wk-btn-primary {
+    background: var(--c-text);
+    color: var(--c-bg);
+    border-color: var(--c-text);
+  }
+
+  .wk-btn-primary:hover:not(:disabled) {
+    background: var(--c-text-2);
+    border-color: var(--c-text-2);
+  }
+
+  .wk-btn-accent {
+    background: var(--c-accent);
+    color: #fff;
+    border-color: var(--c-accent);
+  }
+
+  .wk-btn-accent:hover:not(:disabled) {
+    background: var(--c-accent-2);
+    border-color: var(--c-accent-2);
+  }
+
+  .wk-input {
+    border: none;
+    border-bottom: 1.5px solid var(--c-text-2);
+    background: transparent;
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--c-text);
+    padding: 2px 0;
+    width: 100%;
+    outline: none;
+  }
+
+  .wk-input::placeholder { color: var(--c-text-5); }
+
+  .wk-ph {
+    background: repeating-linear-gradient(
+      135deg,
+      transparent 0 4px,
+      rgba(42, 37, 32, 0.08) 4px 5px
+    );
+    border: 1px dashed var(--c-text-5);
+    border-radius: 2px;
+  }
+
+  .wk-divider {
+    height: 1px;
+    background: var(--c-text);
+    opacity: 0.15;
+    border: 0;
+    margin: 0;
+  }
+
+  .tab-active {
+    position: relative;
+    font-family: var(--font-heading);
+    font-weight: 700;
+  }
+
+  .tab-active::after {
+    content: '';
+    position: absolute;
+    left: -2px; right: -2px; bottom: -3px;
+    height: 4px;
+    background: var(--c-accent);
+    opacity: 0.5;
+    border-radius: 50%;
+    transform: skew(-5deg);
+  }
+}

@@ -1,0 +1,28 @@
+# Claude Code personal settings
+.claude/
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# PDF images (large binary files)
+pdf_pages_30/
+pdf_pages_33/
+pdf_pages_34/
+
+# Raw PDF text extracts
+pdf_text.txt
+pdf_text2.txt
+
+# Logs
+*.log
+devserver.*.log
+
+# Temp files
+temp_*.html
+
+# OS
+.DS_Store
+Thumbs.db
