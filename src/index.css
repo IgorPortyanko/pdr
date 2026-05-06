@@ -370,6 +370,16 @@
     padding: 5px 8px !important;
   }
 
+  .app-change-profile-btn {
+    width: 34px;
+    justify-content: center;
+    gap: 0 !important;
+  }
+
+  .app-change-profile-text {
+    display: none;
+  }
+
   .mobile-nav {
     position: fixed;
     left: 0;

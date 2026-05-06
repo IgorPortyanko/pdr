@@ -33,12 +33,12 @@ export function TopBar() {
             <span className="app-profile-name" style={{ fontSize: 14, fontWeight: 600, color: 'var(--c-text)' }}>{activeProfile.name}</span>
             <button
               onClick={clearActiveProfile}
-              className="wk-btn"
+              className="wk-btn app-change-profile-btn"
               style={{ fontSize: 12, padding: '4px 10px', display: 'flex', alignItems: 'center', gap: 5 }}
               title="Змінити профіль"
             >
               <Users size={13} />
-              Змінити
+              <span className="app-change-profile-text">Змінити</span>
             </button>
           </>
         )}
