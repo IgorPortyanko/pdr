@@ -16,7 +16,7 @@ export function Sidebar() {
 
   return (
     <div
-      className="flex flex-col overflow-hidden bg-paper"
+      className="desktop-sidebar flex flex-col overflow-hidden bg-paper"
       style={{
         width: 250,
         minWidth: 200,

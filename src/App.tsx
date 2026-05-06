@@ -4,6 +4,7 @@ import { useProfileStore } from './store/profileStore';
 import { useThemeStore } from './store/themeStore';
 import { TopBar } from './components/TopBar';
 import { Sidebar } from './components/Sidebar';
+import { MobileNav } from './components/MobileNav';
 import { RuleTable } from './components/RuleTable';
 import { ChapterList } from './components/ChapterList';
 import { SignsGrid } from './components/SignsGrid';
@@ -33,9 +34,9 @@ function App() {
   const showStats = activeCategoryId === 'stats';
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
+    <div className="app-shell">
       <TopBar />
-      <div style={{ display: 'flex', flex: 1, minHeight: 0, overflow: 'hidden' }}>
+      <div className="app-main">
         <Sidebar />
         {showStats
           ? <StatsScreen />
@@ -50,6 +51,7 @@ function App() {
                   : <RuleTable />
         }
       </div>
+      <MobileNav />
     </div>
   );
 }

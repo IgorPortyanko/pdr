@@ -94,7 +94,7 @@ export function SignsGrid() {
         </div>
 
         <div
-          className="overflow-y-auto flex-1"
+          className="catalog-grid overflow-y-auto flex-1"
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))',

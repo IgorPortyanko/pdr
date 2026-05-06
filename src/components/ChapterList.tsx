@@ -23,7 +23,7 @@ export function ChapterList() {
       </span>
 
       <div
-        className="overflow-y-auto flex-1"
+        className="chapter-grid overflow-y-auto flex-1"
         style={{ gap, display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', alignContent: 'start' }}
       >
         {CHAPTERS.map((ch) => (

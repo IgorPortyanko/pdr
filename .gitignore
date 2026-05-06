@@ -7,6 +7,9 @@ node_modules/
 # Build output
 dist/
 
+# Rust/Tauri build output
+src-tauri/target/
+
 # PDF images (large binary files)
 pdf_pages_30/
 pdf_pages_33/
@@ -22,6 +25,35 @@ devserver.*.log
 
 # Temp files
 temp_*.html
+
+# One-time PDF processing scripts (data already generated in src/data/)
+extract_pdf.cjs
+extract_pdf.js
+extract_pdf2.mjs
+extract_images.mjs
+extract_images33.mjs
+extract_images34.mjs
+extract_text33.mjs
+render_pdf_pages.mjs
+render_pages2.mjs
+render_pages3.mjs
+render_pages34.mjs
+ppm_to_png.mjs
+ppm_to_png33.mjs
+ppm_to_png34.mjs
+check_last_pages.mjs
+parse_questions33.mjs
+fix_and_copy33.mjs
+fix_ids.mjs
+gen_quiz33.mjs
+insert_quiz33.mjs
+scripts/
+
+# Intermediate generated data files
+questions33.json
+questions33_clean.json
+quiz33_fragment.ts
+text33.json
 
 # OS
 .DS_Store

@@ -545,9 +545,9 @@ export function QuizScreen() {
           </div>
         )}
 
-        <div style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
+        <div className="quiz-question-layout" style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
           {currentQuestion.image && (
-            <div className="wk-box" style={{ flexShrink: 0, width: '45%', padding: 8, background: 'var(--c-surface)', border: '1px solid var(--c-subtle-2)' }}>
+            <div className="wk-box quiz-image-panel" style={{ flexShrink: 0, width: '45%', padding: 8, background: 'var(--c-surface)', border: '1px solid var(--c-subtle-2)' }}>
               <img src={currentQuestion.image} alt={currentQuestion.prompt}
                 style={{ width: '100%', objectFit: 'contain', borderRadius: 12, display: 'block', background: 'var(--c-surface-3)' }}
               />
